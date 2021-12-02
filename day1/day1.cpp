@@ -18,7 +18,7 @@ int count_increases(vec_input_it begin, vec_input_it end) {
 int main() {
 
     std::vector<int> inp;
-    read_input(inp);
+    aoc::read_input(inp);
 
     int res1 = count_increases(inp.cbegin(), inp.cend());
 
