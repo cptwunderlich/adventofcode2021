@@ -16,6 +16,7 @@ std::string letter_diff(const std::string &s, std::string other) {
     other.erase(std::remove_if(other.begin(), other.end(),
         [s, &other](char c){ return s.find(c) != std::string::npos; }),
         other.end());
+
     return other;
 }
 
@@ -56,7 +57,7 @@ int main() {
 
     int cnt_unique = 0;
     long sum = 0;
-    for (display d : displays) {
+    for (display &d : displays) {
         std::string one, four, seven, eight;
         for (auto &s : d.patterns) {
             if (s.length() == 2) {
