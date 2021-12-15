@@ -16,7 +16,7 @@ size_t apply_rules(const string &poly, const insertion_rules &insns, size_t iter
 
     // Build pairs from template and count letters
     for (size_t i = 0; i < poly.size()-1; ++i) {
-        state.emplace(string{poly[i], poly[i+1]}, 1);
+        ++state[string{poly[i], poly[i+1]}];
         ++letter_cnts[poly[i]];
     }
 
